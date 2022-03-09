@@ -1,0 +1,25 @@
+{%extends "base.html" %}
+
+{%block title%} Home {%endblock%}
+
+{%block nav%}
+           
+{%endblock%}
+
+{%block titleH1%}
+    {%if username != None%}
+        Hi {{username}} !
+    {%else%}
+        Welcome visitor, Log in !
+    {%endif%}
+{%endblock%}
+
+ {%block body%} 
+<div class="container home">
+ <p> Welcome to our Flask-Blog.</p>
+ <p>This wall-page is still under development.</p>
+ <p>But you can browse and post articles by clicking on the link.</p>
+</div>
+        
+{%endblock%}
+

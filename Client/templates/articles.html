@@ -1,0 +1,25 @@
+{%extends "base.html" %}
+
+{%block title%} Posts {%endblock%}
+{%block titleH1%}Articles{%endblock%}
+{%block body%}                
+<a href="#" class="btn btn-primary"> Add a new article</a><hr/>
+                <div class="container">
+                        <div class="row">
+                                {% for article in articles %}
+                                        <div class="card col-5 article shadow-lg">
+                                                <!-- <div class="image"></div> -->
+                                                <div class="card-body">
+                                                        <h5 class="card-title">{{article[1]}}</h5>
+                                                        <p class="writedBy">Posted by: {{article[4]}}</p>
+                                                        <p class="card-text">{{article[2]}}</p>
+                                                        <small>{{article[3]}}</small><br/>
+                                                        <a href="#" class="btn btn-dark">Comments</a><hr>
+                                                </div>
+                                        </div>
+                                {% endfor %}
+                        </div>
+                </div>
+
+{%endblock%}
+
